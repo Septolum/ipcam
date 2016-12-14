@@ -16,7 +16,7 @@ stream_start () {
 
     cd /home/pi/mjpg-streamer/mjpg-streamer-experimental
 
-    ./mjpg_streamer -i "./input_raspicam.so -fps 5 -hf -vf -quality 10 -x 400 -y 300" -o "./output_http.so" &
+    ./mjpg_streamer -i "./input_raspicam.so -fps 5 -hf -vf -quality 10 -x 800 -y 600" -o "./output_http.so" &
     # if you want password protection: ..... "./output_http.so -w ./www -c username:password"
 }
 
@@ -29,7 +29,8 @@ stream_status () {
         exit 0
     else
         echo Stopped
-        exit 1
+	exit 0
+        #exit 1
     fi
 }
 
